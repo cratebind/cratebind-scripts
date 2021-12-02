@@ -89,7 +89,7 @@ export default class LintSetup extends Command {
         title: 'Add Lint Script',
         task: () => {
           updatePackageJson((packageJson: any) => {
-            packageJson.scripts.lint = 'eslint --cache "**/*.js" --fix'
+            packageJson.scripts.lint = 'eslint --cache "**/*.{js,ts,jsx,tsx}" --fix'
 
             return packageJson
           })
