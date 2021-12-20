@@ -1,7 +1,9 @@
 cratebind-scripts
 =================
 
-Collection of helpful tools used by Cratebind
+Collection of helpful CLI tools used by Cratebind
+
+Built using [Oclif](https://github.com/oclif/oclif)
 
 [![oclif](https://img.shields.io/badge/cli-oclif-brightgreen.svg)](https://oclif.io)
 [![Version](https://img.shields.io/npm/v/cratebind-scripts.svg)](https://npmjs.org/package/cratebind-scripts)
@@ -19,7 +21,7 @@ $ npm install -g cratebind-scripts
 $ cratebind-scripts COMMAND
 running command...
 $ cratebind-scripts (-v|--version|version)
-cratebind-scripts/0.0.0 darwin-x64 node-v15.4.0
+cratebind-scripts/0.0.0 darwin-arm64 node-v16.13.1
 $ cratebind-scripts --help [COMMAND]
 USAGE
   $ cratebind-scripts COMMAND
@@ -28,28 +30,8 @@ USAGE
 <!-- usagestop -->
 # Commands
 <!-- commands -->
-* [`cratebind-scripts hello [FILE]`](#cratebind-scripts-hello-file)
 * [`cratebind-scripts help [COMMAND]`](#cratebind-scripts-help-command)
-
-## `cratebind-scripts hello [FILE]`
-
-describe the command here
-
-```
-USAGE
-  $ cratebind-scripts hello [FILE]
-
-OPTIONS
-  -f, --force
-  -h, --help       show CLI help
-  -n, --name=name  name to print
-
-EXAMPLE
-  $ cratebind-scripts hello
-  hello world from ./src/hello.ts!
-```
-
-_See code: [src/commands/hello.ts](https://github.com/matt-cratebind/cratebind-scripts/blob/v0.0.0/src/commands/hello.ts)_
+* [`cratebind-scripts lint-setup`](#cratebind-scripts-lint-setup)
 
 ## `cratebind-scripts help [COMMAND]`
 
@@ -67,4 +49,21 @@ OPTIONS
 ```
 
 _See code: [@oclif/plugin-help](https://github.com/oclif/plugin-help/blob/v3.2.2/src/commands/help.ts)_
+
+## `cratebind-scripts lint-setup`
+
+Add ES lint config with husky and lint-staged to lint on commit
+
+```
+USAGE
+  $ cratebind-scripts lint-setup
+
+OPTIONS
+  -h, --help  show CLI help
+
+EXAMPLE
+  $ cratebind-scripts lint-setup
+```
+
+_See code: [src/commands/lint-setup.ts](https://github.com/matt-cratebind/cratebind-scripts/blob/v0.0.0/src/commands/lint-setup.ts)_
 <!-- commandsstop -->
